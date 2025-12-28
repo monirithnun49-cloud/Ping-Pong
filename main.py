@@ -1,4 +1,5 @@
 from pygame import *
+'''Required classes'''
 
 
 #parent class for sprites
@@ -10,7 +11,7 @@ class GameSprite(sprite.Sprite):
        self.rect = self.image.get_rect()
        self.rect.x = player_x
        self.rect.y = player_y
-racket.png
+
 
    def reset(self):
        window.blit(self.image, (self.rect.x, self.rect.y))
@@ -91,7 +92,7 @@ while game:
            game_over = True
 
 
-       #if ball flies behind this paddle, display loss condition for player 2
+       #if the ball flies behind this paddle, display loss condition for player 2
        if ball.rect.x > win_width:
            finish = True
            window.blit(lose2, (200, 200))
@@ -105,3 +106,6 @@ while game:
 
    display.update()
    clock.tick(FPS)
+
+
+
